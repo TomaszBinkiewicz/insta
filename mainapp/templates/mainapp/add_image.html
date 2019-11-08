@@ -1,0 +1,16 @@
+{% extends "mainapp/base.html" %}
+{% block content %}
+
+{% if request.method == "GET" %}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="title">
+    <input type="number" name="user" value="1">
+    <input type="file" name="myfile">
+    <input type="submit" value="upload">
+</form>
+{% else %}
+    <p>zdjecie dodane. <a href="/">start</a></p>
+{% endif %}
+
+{% endblock %}

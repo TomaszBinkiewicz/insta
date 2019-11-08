@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/style.css' %}">
+</head>
+<body>
+
+<div id="content">
+
+    <header>
+        <nav>
+            <a href="/" class="btn">home</a>
+            <a href="/add-image" class="btn">add-image</a>
+            <a href="/login" class="btn">login</a>
+        </nav>
+    </header>
+
+    <hr>
+    {% block content %}{% endblock %}
+
+</div>
+
+</body>
+</html>
